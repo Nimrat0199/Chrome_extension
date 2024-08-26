@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Only proceed with retrieving storage data after baseDomain is set
         chrome.storage.local.get([baseDomain], function(result) {
-            let data = result[baseDomain]; // Access the data using the baseDomain key
+            let data = result[baseDomain] || []; // Access the data using the baseDomain key
             if(data.length==0){
                 document.querySelector('#abs').classList.toggle('abs');
             }

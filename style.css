@@ -8,7 +8,7 @@ body{
 
 #container{
     background-color:#415a77;
-    height: 300px;
+    min-height: 200px;
     width: 200px;
     margin: 0 auto;
     display: flex;
@@ -99,7 +99,10 @@ textarea {
     color: white;
     font-size: larger;
     line-height: 25px;
-    backdrop-filter: blur(100px);
+    
+}
+
+.display{
     display: none;
 }
 
@@ -116,4 +119,8 @@ img:hover{
 
 .abs{
     display: none;
+}
+
+.blurred{
+    filter: blur(5px);
 }

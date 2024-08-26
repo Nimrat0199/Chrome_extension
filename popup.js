@@ -45,7 +45,12 @@ document.addEventListener('DOMContentLoaded', async() => {
         chrome.storage.local.set({ [baseDomain]: data }, function() {
           console.log('New note added to', baseDomain);
         });
-        document.querySelector('#noteadded').style.display="block";
+        document.querySelector('#noteadded').classList.remove('display');
+        document.querySelector('.container').classList.add('blurred');
+        setTimeout(() => {
+          document.querySelector('#noteadded').classList.add('display');
+        document.querySelector('.container').classList.remove('blurred');
+        }, 2000);
       });
       }
       if(area.value==""){
